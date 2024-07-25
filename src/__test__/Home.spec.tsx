@@ -49,7 +49,7 @@ describe("HomePage component", () => {
       </Provider>,
     );
 
-    expect(getByPlaceholderText("Search by name...")).toBeInTheDocument();
+    expect(getByPlaceholderText("Search by name or id...")).toBeInTheDocument();
   });
 
   test("should redirect to details page when click on the card", async () => {
@@ -72,7 +72,7 @@ describe("HomePage component", () => {
     fireEvent.click(button, { button: 0 });
 
     await waitFor(() => {
-      expect(history.location.pathname).toBe(`/details/${pokemonNameToTest}`);
+      expect(history.location.pathname).toBe(`/${pokemonNameToTest}`);
     });
   });
 
@@ -92,12 +92,12 @@ describe("HomePage component", () => {
       expect(getByTestId(`card-link-${pokemonNameToTest}`)).toBeInTheDocument();
     });
 
-    const searchInput = getByPlaceholderText("Search by name...");
+    const searchInput = getByPlaceholderText("Search by name or id...");
     fireEvent.change(searchInput, { target: { value: pokemonNameToTest } });
     fireEvent.keyDown(searchInput, { key: "Enter", code: 13, charCode: 13 });
 
     await waitFor(() => {
-      expect(history.location.pathname).toBe(`/details/${pokemonNameToTest}`);
+      expect(history.location.pathname).toBe(`/${pokemonNameToTest}`);
     });
   });
 });

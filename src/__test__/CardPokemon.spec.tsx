@@ -5,7 +5,7 @@ import CardPokemon from "../components/CardPokemon";
 
 describe("CardPokemon", () => {
   test("should render simple card correctly", () => {
-    render(<CardPokemon name="pokemon" src="" linkTo="`/details/pokemon`" />, {
+    render(<CardPokemon name="pokemon" src="" linkTo="`/pokemon`" />, {
       wrapper: BrowserRouter,
     });
     expect(screen.getByText("pokemon")).toBeInTheDocument();

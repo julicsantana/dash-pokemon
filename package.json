@@ -1,9 +1,10 @@
 {
-  "name": "looqbox-pokemon",
+  "name": "battle-of-monsters",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "build": "tsc && vite build",
     "test": "jest --watchAll --detectOpenHandles",

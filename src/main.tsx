@@ -16,15 +16,15 @@ import "./index.css";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/home" replace />,
+    element: <HomePage />,
     errorElement: <NotFoundPage />,
   },
   {
     path: "/home",
-    element: <HomePage />,
+    element: <Navigate to="/" replace />,
   },
   {
-    path: "/details/:name",
+    path: "/:name",
     element: <DetailsPage />,
   },
 ]);

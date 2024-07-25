@@ -36,11 +36,7 @@ const ListPokemon = (props: Props) => {
         const src = `${imageBaseUrl}/${id}.png`;
         return (
           <List.Item key={item.name}>
-            <CardPokemon
-              name={item.name}
-              src={src}
-              linkTo={`/details/${item.name}`}
-            />
+            <CardPokemon name={item.name} src={src} linkTo={`/${item.name}`} />
           </List.Item>
         );
       }}

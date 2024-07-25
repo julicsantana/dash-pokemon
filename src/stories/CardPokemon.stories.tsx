@@ -28,7 +28,7 @@ type Story = StoryObj<typeof meta>;
 
 export const SimpleCard: Story = {
   args: {
-    linkTo: "/details/bulbasaur",
+    linkTo: "/bulbasaur",
   },
 };
 

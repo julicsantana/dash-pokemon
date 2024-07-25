@@ -26,9 +26,9 @@ describe("DetailsPage component", () => {
     (getPokemonByName as jest.Mock).mockResolvedValue(mockPokemon);
 
     const { getByText } = render(
-      <MemoryRouter initialEntries={["/details/bulbasaur"]}>
+      <MemoryRouter initialEntries={["/bulbasaur"]}>
         <Routes>
-          <Route path="/details/:name" element={<DetailsPage />} />
+          <Route path="/:name" element={<DetailsPage />} />
         </Routes>
       </MemoryRouter>,
     );
@@ -46,9 +46,9 @@ describe("DetailsPage component", () => {
     (getPokemonByName as jest.Mock).mockReturnValue(new Promise(() => {}));
 
     const { getByTestId } = render(
-      <MemoryRouter initialEntries={["/details/bulbasaur"]}>
+      <MemoryRouter initialEntries={["/bulbasaur"]}>
         <Routes>
-          <Route path="/details/:name" element={<DetailsPage />} />
+          <Route path="/:name" element={<DetailsPage />} />
         </Routes>
       </MemoryRouter>,
     );
@@ -64,9 +64,9 @@ describe("DetailsPage component", () => {
     );
 
     const { getByText } = render(
-      <MemoryRouter initialEntries={["/details/missing-pokemon"]}>
+      <MemoryRouter initialEntries={["/missing-pokemon"]}>
         <Routes>
-          <Route path="/details/:name" element={<DetailsPage />} />
+          <Route path="/:name" element={<DetailsPage />} />
         </Routes>
       </MemoryRouter>,
     );

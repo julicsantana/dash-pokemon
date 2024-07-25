@@ -8,15 +8,11 @@
 
 - Home: Lista de Pokemons
   - Listagem dos cards de pokemons com seus nomes e fotos
-  <!-- - Opção de "Load More" para carregar mais pokemons quando o scroll atinge o fim da lista -->
   - Barra de pesquisa pelo nome do pokemon
 - Details: Detalhes do Pokemon
   - Informações básicas do pokemon
   - Informações em barras sobre as estatísticas
   - Lista de habilidades do pokemon
-  - Botão para adicionar pokemon na lista de comparação
-    <!-- * Compare: Comparação entre pokemons -->
-      <!-- - Cards comparativos das estatísticas dos pokemons -->
 
 ## Como Usar
 

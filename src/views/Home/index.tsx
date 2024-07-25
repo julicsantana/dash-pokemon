@@ -26,7 +26,7 @@ export default function HomePage() {
   const loading = useSelector((state: RootState) => state.pokemon.loading);
   const error = useSelector((state: RootState) => state.pokemon.error);
 
-  const [search, setSearch] = useState<string>();
+  const [search, setSearch] = useState<string>("");
   const [pokemonsFiltered, setPokemonsFiltered] =
     useState<Pokemon[]>(pokemonList);
 
@@ -61,12 +61,14 @@ export default function HomePage() {
   };
 
   const redirectToDetails = () => {
-    navigate(`/details/${search?.toLowerCase()}`);
+    if (search?.length < 1) return;
+    navigate(`/${search?.toLowerCase()}`);
   };
 
-  const filterPokemonList = (name: string) => {
-    const filteredList = pokemonList.filter((pokemon: Pokemon) =>
-      pokemon.name.includes(name),
+  const filterPokemonList = (value: string) => {
+    const filteredList = pokemonList.filter(
+      (pokemon: Pokemon) =>
+        pokemon.name.includes(value) || pokemon.url?.includes(value),
     );
     setPokemonsFiltered(filteredList);
   };
@@ -75,7 +77,7 @@ export default function HomePage() {
     <Layout>
       <PageHeader>
         <SearchBar
-          placeholder="Search by name..."
+          placeholder="Search by name or id..."
           onChange={onInputValueChange}
           onSearch={redirectToDetails}
         />
