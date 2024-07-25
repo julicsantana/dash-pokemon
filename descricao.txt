@@ -1,0 +1,13 @@
+Princípios de Clean Code
+
+1. Nomes Significativos: Os nomes das variáveis, funções e componentes são descritivos e claros (e.g., HomePage, DetailsPage, getPokemonList, pokemonList).
+2. Funções Pequenas e Coesas: As funções são geralmente pequenas e realizam uma única tarefa, como getPokemonList e filterPokemonList.
+3. Sem Comentários Desnecessários: O código está limpo e autoexplicativo, reduzindo a necessidade de comentários.
+4. Formatação Consistente: O código segue uma formatação consistente, facilitando a leitura.
+
+Princípios SOLID
+
+1. Single Responsibility Principle (SRP): Cada componente e função tem uma única responsabilidade. Por exemplo, ListPokemon é responsável apenas por listar os Pokémons, e SearchBar é responsável apenas pela barra de busca.
+2. Open/Closed Principle (OCP): O uso de props nos componentes permite que eles sejam estendidos sem modificar o código existente, como em SearchBar e CardPokemon.
+3. Liskov Substitution Principle (LSP): Todos os componentes podem ser substituídos por seus derivados sem afetar a funcionalidade do programa. Por exemplo, CardPokemon pode ser usado com diferentes tipos de props.
+4. Interface Segregation Principle (ISP): Os componentes são especializados e não forçam a implementação de métodos desnecessários. Por exemplo, CardPokemon e CardPokemonAbilities têm props específicas para suas funcionalidades.

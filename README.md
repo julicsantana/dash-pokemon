@@ -17,7 +17,11 @@
 ## Como Usar
 
 ```bash
+# Clonar o repositório
+$ git clone https://github.com/julicsantana/dash-pokemon.git
+
 # Instalar dependências
+$ cd dash-pokemon
 $ npm install
 
 # Inicializar a aplicação
